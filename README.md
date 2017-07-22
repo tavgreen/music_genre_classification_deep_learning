@@ -6,10 +6,19 @@ In this tutorial, we will try to classify music genre using Deep Convolutional N
 ## Method ##
 There are 5 steps to do in performing music genre classification:
 1. Obtain music data
+you can obtain music data from [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) or others, but be carefull of music licensed.
+
 2. Extract features from music data
+*Spectogram* will be used in this tutorial. in the other case, you can choose MFCC
+
 3. Training data
+Train your music data in Spectogram with Convolutional Neural Network (CNN)
+
 4. Testing data
+After obtaining a model, testing a new data
+
 5. Measure performance
+Perform measurement performance by using Accuracy, Precision, Recall and F1 score
 
 ## Performance Measurement ##
 Classification can be measure by utilizing 
@@ -59,3 +68,4 @@ we test model on 4 data: 2 Sundanese song and 2 Minang Song, the results are:
 - [Music Information Retrieval](http://musicinformationretrieval.org)
 - [Blogg Keras](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
 - Choi et al. 2016. Automatic Tagging using Deep Convolutional Neural Network
+- [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/)
