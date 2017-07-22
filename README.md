@@ -4,25 +4,11 @@
 In this tutorial, we will try to classify music genre using Deep Convolutional Neural Network(CNN) in music file. CNN is powerfull as image classification model, so why do we need CNN in music that literally sound? the answer is we can extract features from music sound like **spectogram** that can be 2D (time, frequency) like images. so lets get started.
 
 ## Method ##
+## Spectogram ##
 not yet finished
-
-## Program ##
-not yet finished
-
-## Result ##
-## Model Performance ##
-After performing training data to Sundanese and Minang song dataset with 10 epochs, validation accuracy reach 75% with loss function as follow:
-
-we test model on 4 data: 2 Sundanese song and 2 Minang Song, the results are:
-
-|           |precision|recall|f1-score|support|
-|-----------|:-------:|:----:|:------:|:-----:|
-|Sunda Song |   0.67  | 1.00 |  0.80  |   2   |
-|Padang Song|   1.00  | 0.50 |  0.67  |   2   |
-|avg / total|   0.83  | 0.75 |  0.73  |   4   |
 
 ## How to measure performance ##
-
+Classification can be measure by utilizing 
 - Precision can be calculated: TP / ( TP + FP )
 - Recall can be calculated: TP / ( TP + FN )
 - F1 Score can be Calculated: (2 * TP) / ( TP + FP ) + ( FP + FN )
@@ -49,6 +35,22 @@ Above diagram mean: 5 Sundanese test case song when predicted by using model can
 - F1(Sunda): (2 * TP) / ( TP + FP ) + ( FP + FN ) = 10 / 12 = 0.83
 - F1(Minang): (2 * TP) / ( TP + FP ) + ( FP + FN ) = 6 / 8 = 0.75
 - F1: (1/2 * ((0.8) + (0.75))) = 0.775
+
+## Program ##
+not yet finished
+
+## Result ##
+## Model Performance ##
+After performing training data to Sundanese and Minang song dataset with 10 epochs, validation accuracy reach 75% with loss function as follow:
+
+we test model on 4 data: 2 Sundanese song and 2 Minang Song, the results are:
+
+|           |precision|recall|f1-score|support|
+|-----------|:-------:|:----:|:------:|:-----:|
+|Sunda Song |   0.67  | 1.00 |  0.80  |   2   |
+|Padang Song|   1.00  | 0.50 |  0.67  |   2   |
+|avg / total|   0.83  | 0.75 |  0.73  |   4   |
+
 
 ## References ##
 - [Music Information Retrieval](http://musicinformationretrieval.org)
