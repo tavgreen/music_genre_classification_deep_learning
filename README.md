@@ -5,6 +5,7 @@ In this tutorial, we will try to classify music genre using Deep Convolutional N
 
 ## Method ##
 There are 5 steps to do in performing music genre classification:
+
 **1. Obtain music data**
 you can obtain music data from [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) or other sources, but be carefull of music licensed. In this project, i used music from Indonesian traditional music that consists of two classes: Sundanese music and Minang music. both of music have 100 music file for training, 10 music file for validation and 2 music file for testing.
 
