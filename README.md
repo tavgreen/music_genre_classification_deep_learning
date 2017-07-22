@@ -7,19 +7,25 @@ In this tutorial, we will try to classify music genre using Deep Convolutional N
 There are 5 steps to do in performing music genre classification:
 
 **1. Obtain music data**
+
 you can obtain music data from [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) or other sources, but be carefull of music licensed. In this project, i used music from Indonesian traditional music that consists of two classes: Sundanese music and Minang music. both of music have 100 music file for training, 10 music file for validation and 2 music file for testing.
 
 **2. Extract features from music data**
+
 After obtaining music file, extract *Spectogram* feature that will be used in this tutorial. in the other case, you can choose MFCC. here example Spectogram extracted from [Librosa](https://librosa.github.io). This data will be entered into Convolutional Neural Network (CNN) model.
 ![Fig.1](https://librosa.github.io/librosa/_images/librosa-feature-melspectrogram-1.png)
 
 **3. Train Model**
+
 Train your music data in Spectogram form with Convolutional Neural Network (CNN). The architecture of CNN can be seen below:
+![Fig.1](https://raw.github.com/tavgreen/landuse_classification/master/file/cnn.png?raw=true "Auto Encoder") 
 
 **4. Test Model**
+
 After obtaining a model from train process, test a new data
 
 **5. Measure performance**
+
 Perform measurement performance by using Accuracy, Precision, Recall and F1 score. Classification can be measure by utilizing 
 - Precision can be calculated: TP / ( TP + FP )
 - Recall can be calculated: TP / ( TP + FN )
