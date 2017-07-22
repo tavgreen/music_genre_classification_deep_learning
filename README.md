@@ -43,6 +43,8 @@ not yet finished
 ## Model Performance ##
 After performing training data to Sundanese and Minang song dataset with 10 epochs, validation accuracy reach 75% with loss function as follow:
 
+![Fig.1](https://raw.github.com/tavgreen/music_genre_classification_deep_learning/master/file/loss.png?raw=true "Loss Function") 
+
 we test model on 4 data: 2 Sundanese song and 2 Minang Song, the results are:
 
 |           |precision|recall|f1-score|support|
