@@ -10,19 +10,19 @@ not yet finished
 not yet finished
 
 ## Result ##
-## Accuracy ##
-After performing training data to Sundanese and Minang song dataset with 10 epochs, validation accuracy reach **75%** with loss function as follow:
+## Model Performance ##
+After performing training data to Sundanese and Minang song dataset with 10 epochs, validation accuracy reach 75% with loss function as follow:
 
-## Precision, Recall, F1 ##
 we test model on 4 data: 2 Sundanese song and 2 Minang Song, the results are:
-====================================================
-            precision    recall  f1-score   support
 
- Sunda Song       0.67      1.00      0.80         2
-Padang Song       1.00      0.50      0.67         2
+|           |precision|recall|f1-score|support|
+|-----------|:-------:|:----:|:------:|:-----:|
+|Sunda Song |   0.67  | 1.00 |  0.80  |   2   |
+|Padang Song|   1.00  | 0.50 |  0.67  |   2   |
+|avg / total|   0.83  | 0.75 |  0.73  |   4   |
 
-avg / total       0.83      0.75      0.73         4
-====================================================
+## How to measure performance ##
+
 - Precision can be calculated: TP / ( TP + FP )
 - Recall can be calculated: TP / ( TP + FN )
 - F1 Score can be Calculated: (2 * TP) / ( TP + FP ) + ( FP + FN )
@@ -32,13 +32,14 @@ FP: False Possitive (The num of Possitive Class that predicted false)
 TN: True Negative (The num of Negative Class that predicted true)
 FN: False Negative (The num of Negative Class that predicted false)
 
-### Measurement Example ###
+
 Let say confusion matrix from 10 test case (5 sundanese and 5 minang):
-================================
-            Sundanese    Minang
-Sundanese       5          0
-Minang          2          3
-================================
+
+|          |Sundanese|Minang|
+|----------|:-------:|:----:|
+|Sundanese |    5    |   0  |
+|Minang    |    2    |   3  |
+
 Above diagram mean: 5 Sundanese test case song when predicted by using model can produce 5 correct prediction. in the other side, 5 Minang test case song when predicted by using model can produce 3 correct prediction and 2 incorrect prediction.
 
 - Precision(Sunda): TP / (TP + FP) = 5 / (5 + 0) = 1
