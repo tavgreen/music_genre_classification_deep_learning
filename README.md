@@ -5,24 +5,21 @@ In this tutorial, we will try to classify music genre using Deep Convolutional N
 
 ## Method ##
 There are 5 steps to do in performing music genre classification:
-1. Obtain music data
+**1. Obtain music data**
 you can obtain music data from [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) or other sources, but be carefull of music licensed. In this project, i used music from Indonesian traditional music that consists of two classes: Sundanese music and Minang music. both of music have 100 music file for training, 10 music file for validation and 2 music file for testing.
 
-2. Extract features from music data
-After obtaining music file, extract *Spectogram* feature that will be used in this tutorial. in the other case, you can choose MFCC. here example Spectogram from Librosa
+**2. Extract features from music data**
+After obtaining music file, extract *Spectogram* feature that will be used in this tutorial. in the other case, you can choose MFCC. here example Spectogram extracted from [Librosa](https://librosa.github.io). This data will be entered into Convolutional Neural Network (CNN) model.
 ![Fig.1](https://librosa.github.io/librosa/_images/librosa-feature-melspectrogram-1.png)
 
-3. Training data
-Train your music data in Spectogram with Convolutional Neural Network (CNN)
+**3. Train Model**
+Train your music data in Spectogram form with Convolutional Neural Network (CNN). The architecture of CNN can be seen below:
 
-4. Testing data
-After obtaining a model, testing a new data
+**4. Test Model**
+After obtaining a model from train process, test a new data
 
-5. Measure performance
-Perform measurement performance by using Accuracy, Precision, Recall and F1 score
-
-## Performance Measurement ##
-Classification can be measure by utilizing 
+**5. Measure performance**
+Perform measurement performance by using Accuracy, Precision, Recall and F1 score. Classification can be measure by utilizing 
 - Precision can be calculated: TP / ( TP + FP )
 - Recall can be calculated: TP / ( TP + FN )
 - F1 Score can be Calculated: (2 * TP) / ( TP + FP ) + ( FP + FN )
@@ -64,6 +61,8 @@ we test model on 4 data: 2 Sundanese song and 2 Minang Song, the results are:
 |Padang Song|   1.00  | 0.50 |  0.67  |   2   |
 |avg / total|   0.83  | 0.75 |  0.73  |   4   |
 
+### Improvement ###
+The result is still not good because overfitting happened. Fine tuning of model, increasing train and validation data size can be a solution for improvement.
 
 ## References ##
 - [Music Information Retrieval](http://musicinformationretrieval.org)
