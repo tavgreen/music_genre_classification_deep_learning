@@ -20,13 +20,42 @@ After obtaining music file, extract *Spectogram* feature that will be used in th
 Train your music data in Spectogram form with Convolutional Neural Network (CNN). The architecture of CNN can be seen below:
 ![Fig.1](https://raw.github.com/tavgreen/landuse_classification/master/file/cnn.png?raw=true "Auto Encoder") 
 
+we can see from above architecture, there are several layer consist in CNN like Input layer, Convolutional Layer, Subsampling/Pooling Layer, Fully Connected Layer and so on. We did some modification in typical CNN like:
+- Input data are 100 spectograms for Sundanese and Minang Music respectively. The size of each Spectograms was modified into 128x5168.
+- We use Sequential model based on Cho et al references. below is modification from original one(data will be flow through Sequential model from top to bottom):
+
+|   Layer  |     Shape     |
+|----------|:-------------:|
+|  Conv2D  |    3x3x64     |
+|BatchNorm |               |
+|Activation|     RELU      |
+|MaxPooling|      2x4      |
+| Dropout  |     0.25      |
+|  Conv2D  |    3x3x128    |
+|BatchNorm |               |
+|Activation|     RELU      |
+|MaxPooling|      2x4      |
+| Dropout  |     0.25      |
+|  Conv2D  |    3x3x64     |
+|BatchNorm |               |
+|Activation|     RELU      |
+|MaxPooling|      3x5      |
+| Dropout  |     0.25      |
+|  Conv2D  |    3x3x32     |
+|BatchNorm |               |
+|Activation|     RELU      |
+|MaxPooling|      2x4      |
+| Dropout  |     0.25      |
+|FullyConn |               |
+| Softmax  |               |
+
 **4. Test Model**
 
-After obtaining a model from train process, test a new data
+After obtaining a model from train process, test model that have not seen in training data will be performed. If the model can predict testing data based on Ground Truth, the result is good otherwise, tuning your model.
 
 **5. Measure performance**
 
-Perform measurement performance by using Accuracy, Precision, Recall and F1 score. Classification can be measure by utilizing 
+Perform measurement performance by using Accuracy, Precision, Recall and F1 score. Classification can be measured by utilizing 
 - Precision can be calculated: TP / ( TP + FP )
 - Recall can be calculated: TP / ( TP + FN )
 - F1 Score can be Calculated: (2 * TP) / ( TP + FP ) + ( FP + FN )
