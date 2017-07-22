@@ -4,10 +4,14 @@
 In this tutorial, we will try to classify music genre using Deep Convolutional Neural Network(CNN) in music file. CNN is powerfull as image classification model, so why do we need CNN in music that literally sound? the answer is we can extract features from music sound like **spectogram** that can be 2D (time, frequency) like images. so lets get started.
 
 ## Method ##
-## Spectogram ##
-not yet finished
+There are 5 steps to do in performing music genre classification:
+1. Obtain music data
+2. Extract features from music data
+3. Training data
+4. Testing data
+5. Measure performance
 
-## How to measure performance ##
+## Performance Measurement ##
 Classification can be measure by utilizing 
 - Precision can be calculated: TP / ( TP + FP )
 - Recall can be calculated: TP / ( TP + FN )
@@ -36,11 +40,8 @@ Above diagram mean: 5 Sundanese test case song when predicted by using model can
 - F1(Minang): (2 * TP) / ( TP + FP ) + ( FP + FN ) = 6 / 8 = 0.75
 - F1: (1/2 * ((0.8) + (0.75))) = 0.775
 
-## Program ##
-not yet finished
-
 ## Result ##
-## Model Performance ##
+### Model Performance ###
 After performing training data to Sundanese and Minang song dataset with 10 epochs, validation accuracy reach 75% with loss function as follow:
 
 ![Fig.1](https://raw.github.com/tavgreen/music_genre_classification_deep_learning/master/file/loss.png?raw=true "Loss Function") 
